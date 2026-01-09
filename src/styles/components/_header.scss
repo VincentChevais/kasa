@@ -1,0 +1,44 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.header {
+  @include flex-between;
+  margin: 50px 100px;
+
+  @include mobile {
+    margin: 25px 20px;
+  }
+
+  &__logo {
+    height: 68px;
+
+    @include mobile {
+      height: 47px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: $spacing-lg;
+
+    @include mobile {
+      gap: $spacing-sm;
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+      font-size: 24px;
+
+      @include mobile {
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      &:hover,
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}

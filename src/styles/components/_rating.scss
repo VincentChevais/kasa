@@ -1,0 +1,20 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.rating {
+  display: flex;
+  gap: 5px;
+
+  &__star {
+    font-size: 24px;
+    color: #e3e3e3;
+
+    &--active {
+      color: $primary-color;
+    }
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+}

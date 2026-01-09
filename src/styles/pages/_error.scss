@@ -1,0 +1,46 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.error {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 140px;
+    text-align: center;
+    color: $primary-color;
+
+    @include mobile {
+        gap: 110px;
+    }
+
+    &__title {
+        font-size: 288px;
+        font-weight: 700;
+
+        @include mobile {
+            font-size: 96px;
+        }
+    }
+
+    &__text {
+        font-size: 36px;
+        font-weight: 500;
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: underline;
+        color: $text-color;
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+}

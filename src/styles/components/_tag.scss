@@ -1,0 +1,17 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.tag {
+  background-color: $primary-color;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+
+  @include mobile {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+}

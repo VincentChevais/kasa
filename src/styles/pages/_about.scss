@@ -1,0 +1,21 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.about {
+
+  &__container {
+    max-width: 100%;
+  }
+
+  &__collapses {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 40px 209px;
+
+    @include mobile {
+      margin-inline: 20px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+// Import des composants
+@use "./components/header";
+@use "./components/footer";
+@use "./components/card";
+@use "./components/banner";
+@use "./components/collapse";
+@use "./components/tag";
+@use "./components/host";
+@use "./components/rating";
+@use "./components/carousel";
+
+// Import des pages
+@use './pages/home';
+@use './pages/about';
+@use './pages/logement';
+@use './pages/error';
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: $text-color;
+
+}

@@ -1,0 +1,23 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.footer {
+  background-color: $text-color;
+  color: $white;
+  text-align: center;
+  padding: $spacing-xl 0;
+  margin-top: $spacing-xl;
+
+  &__logo {
+    width: 122px;
+    margin-bottom: $spacing-md;
+  }
+
+  &__text {
+    font-size: 24px;
+    
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+}

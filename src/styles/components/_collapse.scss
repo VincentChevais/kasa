@@ -1,0 +1,61 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.collapse {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &__header {
+    width: 100%;
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: none;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+
+    @include mobile {
+      font-size: 13px;
+    }
+  }
+
+  &__icon {
+    font-size: 32px;
+    transition: transform 0.3s ease;
+  }
+
+  &__content {
+    background-color: #f6f6f6;
+    color: $text-color;
+
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  /* ÉTAT OUVERT */
+  &--open {
+    .collapse__content {
+      max-height: 500px;
+      padding: 20px;
+    }
+
+    .collapse__icon {
+      transform: rotate(180deg);
+    }
+  }
+}
