@@ -2,6 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Router from "./router/Router";
+import ScrollToTop from "./components/ScrollToTop";
 import "./styles/main.scss";
 
 // App est le composant racine de l'application
@@ -11,6 +12,7 @@ import "./styles/main.scss";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Header />
       <Router />
       <Footer />
