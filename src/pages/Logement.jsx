@@ -29,8 +29,8 @@ function Logement() {
 
             <section className="logement__header">
                 <div>
-                    <h1>{logement.title}</h1>
-                    <p>{logement.location}</p>
+                    <h1 className="logement__title">{logement.title}</h1>
+                    <p className="logement__loc">{logement.location}</p>
 
                     {/* Liste des tags du logement */}
                     <div className="logement__tags">

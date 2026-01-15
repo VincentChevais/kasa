@@ -33,13 +33,21 @@ function Carousel({ pictures }) {
                         className="carousel__btn carousel__btn--prev"
                         onClick={prev}
                     >
-                        ‹
+                        <img
+                            src="/assets/arrow.svg"
+                            alt="Flèche précédente"
+                            className="carousel__icon"
+                        />
                     </button>
                     <button
                         className="carousel__btn carousel__btn--next"
                         onClick={next}
                     >
-                        ›
+                        <img
+                            src="/assets/arrow.svg"
+                            alt="Flèche suivante"
+                            className="carousel__icon"
+                        />
                     </button>
 
                     {/* Indicateur de position (ex: 1 / 5) */}

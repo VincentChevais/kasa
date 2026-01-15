@@ -1,11 +1,13 @@
 @use "../variables" as *;
 
+
+// Footer Styles
 .footer {
   background-color: $text-color;
   color: $white;
   text-align: center;
-  padding: $spacing-xl 0;
-  margin-top: $spacing-xl;
+  padding-block: $spacing-xl $spacing-lg;
+
 
   &__logo {
     width: 122px;
@@ -13,10 +15,10 @@
   }
 
   &__text {
-    font-size: 24px;
+    font-size: $font-size-lg;
 
     @include mobile {
-      font-size: 12px;
+      font-size: $font-size-sm;
     }
   }
 }

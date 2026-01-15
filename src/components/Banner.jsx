@@ -5,6 +5,7 @@ function Banner({ image, title, className }) {
         src={image}
         alt=""
         className="banner__img"
+        fetchPriority="high"
       />
 
       {title && (

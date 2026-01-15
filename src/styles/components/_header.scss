@@ -1,5 +1,7 @@
 @use "../variables" as *;
 
+// Header Styles
+
 .header {
   @include flex-between;
   margin: 50px 100px;
@@ -8,6 +10,7 @@
     margin: 25px 20px;
   }
 
+  // Header Logo Styles
   &__logo {
     height: 68px;
 
@@ -16,16 +19,18 @@
     }
   }
 
+  // Header Navigation Styles
   &__nav {
     display: flex;
-    gap: $spacing-lg;
+    gap: $spacing-xl;
 
     @include mobile {
-      gap: $spacing-sm;
+      gap: $spacing-md;
     }
 
     a {
       text-decoration: none;
+      font-weight: 500;
       color: $text-color;
       font-size: $font-size-lg;
 
@@ -36,6 +41,7 @@
     }
   }
 
+  // Header Link Hover and Active Styles
   &__link {
 
     &:hover,

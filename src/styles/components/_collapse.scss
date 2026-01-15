@@ -1,21 +1,22 @@
 @use "../variables" as *;
 
+// Collapse Component Styles
 .collapse {
-  border-radius: $border-radius;
-  overflow: hidden;
-
-  @include mobile {
-    border-radius: $border-radius-sm;
-  }
 
   &__header {
     @include flex-between;
+    border-radius: $border-radius;
+    overflow: hidden;
     width: 100%;
     background-color: $primary-color;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+
+    @include mobile {
+      border-radius: $border-radius-sm;
+    }
   }
 
   &__title {
@@ -37,24 +38,23 @@
     }
   }
 
-
   &__content {
-    background-color: $background-color;
     color: $text-color;
-    font-size: 18px;
+    overflow: hidden;
+    font-size: $font-size-md;
     max-height: 0;
     transition: max-height 0.3s ease, padding 0.3s ease;
 
     @include mobile {
-      font-size: 12px;
+      font-size: $font-size-sm;
     }
   }
 
-  /* ÉTAT OUVERT */
+  // Open State Styles
   &--open {
     .collapse__content {
       max-height: 500px;
-      padding: 20px;
+      padding: 15px 20px;
     }
 
     .collapse__icon {

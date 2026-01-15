@@ -4,13 +4,16 @@ function Rating({ value }) {
     return (
         <div className="rating">
             {[1, 2, 3, 4, 5].map((star) => (
-                <span
+                <img
                     key={star}
-                    className={`rating__star ${star <= rating ? "rating__star--active" : ""
-                        }`}
-                >
-                    ★
-                </span>
+                    src={
+                        star <= rating
+                            ? "/assets/rating-red.svg"
+                            : "/assets/rating-grey.svg"
+                    }
+                    alt=""
+                    className="rating__star"
+                />
             ))}
         </div>
     );

@@ -5,7 +5,8 @@ function About() {
     return (
         <main className="about">
             <div className="about__container">
-                <Banner image="/assets/banner-about.jpg" />
+                <Banner image="/assets/banner-about.jpg"
+                    className="banner--about" />
 
                 <section className="about__collapses">
                     <Collapse title="Fiabilité">

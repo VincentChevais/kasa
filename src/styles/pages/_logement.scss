@@ -1,5 +1,6 @@
 @use "../variables" as *;
 
+// Logement Page Styles
 .logement {
     margin-inline: 100px;
 
@@ -7,33 +8,7 @@
         margin-inline: 20px;
     }
 
-    h1 {
-        font-size: 36px;
-        font-weight: 500;
-        color: $primary-color;
-
-        @include mobile {
-            font-size: 18px;
-        }
-    }
-
-    p {
-        font-size: 18px;
-        font-weight: 500;
-        margin-top: 5px;
-
-        @include mobile {
-            font-size: 14px;
-        }
-    }
-
-    &__tags {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin: 20px 0;
-    }
-
+    // Logement Header Container Styles
     &__header {
         display: flex;
         justify-content: space-between;
@@ -43,15 +18,45 @@
 
         @include mobile {
             flex-direction: column;
-            gap: 20px;
         }
     }
 
+    // Logement Title
+    .logement__title {
+        font-size: $font-size-xl;
+        font-weight: 500;
+        color: $primary-color;
+
+        @include mobile {
+            font-size: $font-size-md;
+        }
+    }
+
+    // Logement Location
+    .logement__loc {
+        font-size: $font-size-md;
+        font-weight: 500;
+        margin-top: 5px;
+
+        @include mobile {
+            font-size: $font-size-sm;
+        }
+    }
+
+    // Logement Tags Container Styles
+    &__tags {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 25px 0;
+    }
+
+    // Logement Host & Rating Container Styles
     &__host {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        gap: 10px;
+        gap: 20px;
 
         @include mobile {
             flex-direction: row-reverse;
@@ -61,19 +66,22 @@
         }
     }
 
+    // Logement Collapses Container Styles
     &__collapses {
-        display: flex;
-        flex-direction: row;
-        gap: 76px;
-        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 75px;
+        margin-bottom: 50px;
 
         @include mobile {
-            flex-direction: column;
+            grid-template-columns: 1fr;
             gap: 20px;
             width: 100%;
+            margin-bottom: 25px;
         }
     }
 
+    // Logement Equipments List Styles
     ul {
         list-style: none;
         padding-left: 0;

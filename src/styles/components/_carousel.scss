@@ -1,5 +1,6 @@
 @use "../variables" as *;
 
+// Carousel Component Styles
 .carousel {
   position: relative;
   height: 415px;
@@ -16,36 +17,50 @@
     object-fit: cover;
   }
 
+  // Navigation Buttons
   &__btn {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 40%;
     background: none;
     border: none;
-    color: white;
-    font-size: 80px;
+    color: $white;
     cursor: pointer;
-
-    @include mobile {
-      font-size: 30px;
-    }
 
     &--prev {
       left: 20px;
+      transform: rotate(270deg);
+
+      @include mobile {
+        left: 6px;
+      }
     }
 
     &--next {
       right: 20px;
+      transform: rotate(90deg);
+
+      @include mobile {
+        right: 6px;
+      }
     }
   }
 
+  &__icon {
+    height: 90px;
+
+    @include mobile {
+      height: 30px;
+    }
+  }
+
+  // Position Indicator
   &__counter {
     position: absolute;
-    bottom: 20px;
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
-    font-size: 18px;
+    color: $white;
+    font-size: $font-size-md;
 
     @include mobile {
       display: none;

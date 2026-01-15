@@ -1,5 +1,7 @@
 @use "../variables" as *;
 
+// About Page Collapses Styles 
+
 .about {
 
   &__container {
@@ -15,5 +17,13 @@
     @include mobile {
       margin-inline: 20px;
     }
+  }
+}
+
+// About Page Banner Styles 
+
+.banner--about {
+  .banner__img {
+    filter: brightness(70%);
   }
 }

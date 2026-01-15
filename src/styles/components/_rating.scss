@@ -2,18 +2,19 @@
 
 .rating {
   display: flex;
-  gap: 5px;
+  gap: 12px;
+
+  @include mobile {
+    gap: 6px;
+  }
 
   &__star {
-    font-size: 24px;
-    color: #e3e3e3;
-
-    &--active {
-      color: $primary-color;
-    }
+    width: 32px;
+    height: 32px;
 
     @include mobile {
-      font-size: 18px;
+      width: 18px;
+      height: 18px;
     }
   }
 }
