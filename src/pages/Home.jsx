@@ -7,7 +7,11 @@ function Home() {
     <main className="home">
       <Banner
         image="/assets/banner-home.jpg"
-        title="Chez vous, partout et ailleurs"
+        title={
+          <>
+            Chez vous,<span className="banner__break">partout et ailleurs</span>
+          </>
+        }
         className="banner--home"
       />
 

@@ -1,3 +1,10 @@
+/* =========================
+   VARIABLES
+   ========================= */
+
+// Font
+$font-family: 'Montserrat', sans-serif;
+
 // Couleurs
 $primary-color: #FF6060;
 $background-color: #F6F6F6;
@@ -15,6 +22,45 @@ $spacing-md: 24px;
 $spacing-lg: 32px;
 $spacing-xl: 48px;
 
+// Font sizes
+$font-size-sm: 12px;
+$font-size-md: 18px;
+$font-size-lg: 24px;
+$font-size-xl: 48px;
+
 // Border radius
+$border-radius-sm: 5px;
 $border-radius: 10px;
 $border-radius-lg: 25px;
+
+
+/* =========================
+   MIXIN
+   ========================= */
+
+
+// Media queries
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+// Flexbox
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

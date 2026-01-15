@@ -1,10 +1,9 @@
 @use "../variables" as *;
-@use "../mixins" as *;
 
 .carousel {
   position: relative;
   height: 415px;
-  border-radius: 25px;
+  border-radius: $border-radius-lg;
   overflow: hidden;
 
   @include mobile {

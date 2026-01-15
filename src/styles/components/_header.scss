@@ -1,5 +1,4 @@
 @use "../variables" as *;
-@use "../mixins" as *;
 
 .header {
   @include flex-between;
@@ -28,17 +27,20 @@
     a {
       text-decoration: none;
       color: $text-color;
-      font-size: 24px;
+      font-size: $font-size-lg;
 
       @include mobile {
-        font-size: 12px;
+        font-size: $font-size-sm;
         text-transform: uppercase;
       }
+    }
+  }
 
-      &:hover,
-      &.active {
-        text-decoration: underline;
-      }
+  &__link {
+
+    &:hover,
+    &--active {
+      text-decoration: underline !important;
     }
   }
 }

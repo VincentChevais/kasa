@@ -6,25 +6,33 @@ import Tag from "../components/Tag";
 import Rating from "../components/Rating";
 import Host from "../components/Host";
 
+// Logement affiche le détail d'un logement en fonction de l'id présent dans l'URL
+// useParams permet de récupérer le paramètre dynamique ":id"
+// Si aucun logement ne correspond, on redirige vers la page 404
 function Logement() {
     const { id } = useParams();
 
+    // Recherche du logement correspondant à l'id dans les données
     const logement = logements.find(
         (item) => item.id.toString() === id.toString()
     );
 
+    // Redirection si le logement n'existe pas
     if (!logement) {
         return <Navigate to="*" />;
     }
 
     return (
         <main className="logement">
+            {/* Galerie d'images du logement */}
             <Carousel pictures={logement.pictures} />
 
             <section className="logement__header">
                 <div>
                     <h1>{logement.title}</h1>
                     <p>{logement.location}</p>
+
+                    {/* Liste des tags du logement */}
                     <div className="logement__tags">
                         {logement.tags.map((tag) => (
                             <Tag key={tag} label={tag} />
@@ -32,6 +40,7 @@ function Logement() {
                     </div>
                 </div>
 
+                {/* Informations sur l'hôte et notation */}
                 <div className="logement__host">
                     <Host
                         name={logement.host.name}
@@ -41,6 +50,7 @@ function Logement() {
                 </div>
             </section>
 
+            {/* Sections repliables */}
             <section className="logement__collapses">
                 <Collapse title="Description">
                     <p>{logement.description}</p>

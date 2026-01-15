@@ -1,5 +1,4 @@
 @use "../variables" as *;
-@use "../mixins" as *;
 
 .footer {
   background-color: $text-color;
@@ -15,7 +14,7 @@
 
   &__text {
     font-size: 24px;
-    
+
     @include mobile {
       font-size: 12px;
     }
