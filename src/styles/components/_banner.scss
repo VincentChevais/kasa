@@ -1,5 +1,6 @@
 @use "../variables" as *;
 
+// Banner Component Styles
 .banner {
   position: relative;
   height: 223px;
@@ -11,40 +12,40 @@
     margin: 25px 20px;
     height: 111px;
   }
-}
 
-.banner__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.banner__title {
-  position: absolute;
-  inset: 0;
-  text-align: center;
-  align-content: center;
-  color: $white;
-  font-size: $font-size-xxl;
-  font-weight: 700;
-  -webkit-text-stroke: 2px black;
-  paint-order: stroke fill;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-
-  @include mobile {
-    font-size: $font-size-lg;
-    padding: 0 16px;
-    text-align: left;
-    -webkit-text-stroke: 0;
-    text-shadow: 0 0 0;
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-}
 
-.banner__break {
-  margin-left: 8px;
+  &__title {
+    position: absolute;
+    inset: 0;
+    text-align: center;
+    align-content: center;
+    color: $white;
+    font-size: $font-size-xxl;
+    font-weight: 700;
+    -webkit-text-stroke: 2px black;
+    paint-order: stroke fill;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 
-  @include mobile {
-    margin-left: 0;
-    display: block;
+    @include mobile {
+      font-size: $font-size-lg;
+      padding: 0 16px;
+      text-align: left;
+      -webkit-text-stroke: 0;
+      text-shadow: 0 0 0;
+    }
+  }
+
+  &__break {
+    margin-left: 8px;
+
+    @include mobile {
+      margin-left: 0;
+      display: block;
+    }
   }
 }

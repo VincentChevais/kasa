@@ -42,8 +42,13 @@
     color: $text-color;
     overflow: hidden;
     font-size: $font-size-md;
-    max-height: 0;
-    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 20px;
+
+    // Initially collapsed & transition styles
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
 
     @include mobile {
       font-size: $font-size-sm;
@@ -53,7 +58,9 @@
   // Open State Styles
   &--open {
     .collapse__content {
-      max-height: 500px;
+      // Expanded styles & transition styles
+      transform: scaleY(1);
+      opacity: 1;
       padding: 15px 20px;
     }
 

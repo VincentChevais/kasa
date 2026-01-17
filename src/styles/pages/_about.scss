@@ -22,8 +22,10 @@
 
 // About Page Banner Styles 
 
-.banner--about {
-  .banner__img {
-    filter: brightness(70%);
+.banner {
+  &--about {
+    .banner__img {
+      filter: brightness(70%);
+    }
   }
 }
