@@ -45,6 +45,7 @@
     padding: 0 20px;
 
     // Initially collapsed & transition styles
+    max-height: 0;
     transform: scaleY(0);
     transform-origin: top;
     opacity: 0;
@@ -59,6 +60,7 @@
   &--open {
     .collapse__content {
       // Expanded styles & transition styles
+      max-height: 500px;
       transform: scaleY(1);
       opacity: 1;
       padding: 15px 20px;

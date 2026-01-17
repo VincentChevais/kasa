@@ -1,44 +1,25 @@
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
+import BannerImage from "../assets/banner-about.jpg";
+import aboutData from "../data/about.json";
+
+// Page About
+// Utilise une bannière spécifique et plusieurs composants Collapse
+// Données statiques transmises via les props aux composants Banner et Collapse
 
 function About() {
     return (
         <main className="about">
             <div className="about__container">
-                <Banner image="/assets/banner-about.jpg"
+                <Banner image={BannerImage}
                     className="banner--about" />
 
                 <section className="about__collapses">
-                    <Collapse title="Fiabilité">
-                        <p>
-                            Les annonces postées sur Kasa garantissent une fiabilité totale.
-                            Les photos sont conformes aux logements, et toutes les informations
-                            sont régulièrement vérifiées par nos équipes.
-                        </p>
-                    </Collapse>
-
-                    <Collapse title="Respect">
-                        <p>
-                            La bienveillance fait partie des valeurs fondatrices de Kasa.
-                            Tout comportement discriminatoire ou de perturbation du voisinage
-                            entraînera une exclusion de notre plateforme.
-                        </p>
-                    </Collapse>
-
-                    <Collapse title="Service">
-                        <p>
-                            Nos équipes se tiennent à votre disposition pour vous fournir
-                            une expérience parfaite. N'hésitez pas à nous contacter si besoin.
-                        </p>
-                    </Collapse>
-
-                    <Collapse title="Sécurité">
-                        <p>
-                            La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
-                            pour les voyageurs, chaque logement correspond aux critères de
-                            sécurité établis par nos services.
-                        </p>
-                    </Collapse>
+                    {aboutData.map((item) => (
+                        <Collapse key={item.title} title={item.title}>
+                            <p>{item.content}</p>
+                        </Collapse>
+                    ))}
                 </section>
             </div>
         </main>
