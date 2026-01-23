@@ -5,7 +5,8 @@ import aboutData from "../data/about.json";
 
 // Page About
 // Utilise une bannière spécifique et plusieurs composants Collapse
-// Données statiques transmises via les props aux composants Banner et Collapse
+// Données statiques transmises via les props au composant Banner
+// Données des sections repliables importées depuis un JSON local
 
 function About() {
     return (

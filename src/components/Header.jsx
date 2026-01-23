@@ -1,5 +1,10 @@
 import { NavLink } from "react-router-dom";
 
+// Composant Header
+// Affiche le logo et la navigation principale
+// Utilise NavLink pour appliquer une classe active au lien de la page courante
+// Présent sur toutes les pages de l'application
+
 function Header() {
   return (
     <header className="header">

@@ -9,8 +9,6 @@ import BannerImage from "../assets/banner-home.jpg";
 //  transmises au composant Banner via les props.
 // Données de logements importées depuis un JSON local parcouru avec map,
 //  transmises aux composants Card via les props.
-
-
 function Home() {
   return (
     <main className="home">

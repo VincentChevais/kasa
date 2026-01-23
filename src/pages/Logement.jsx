@@ -6,25 +6,25 @@ import Tag from "../components/Tag";
 import Rating from "../components/Rating";
 import Host from "../components/Host";
 
+// Page Logement
 // Logement affiche le détail d'un logement en fonction de l'id présent dans l'URL
 // useParams permet de récupérer le paramètre dynamique ":id"
+// Recherche du logement correspondant à l'id dans les données
 // Si aucun logement ne correspond, on redirige vers la page 404
+// Affiche les informations du logement : galerie, titre, localisation, tags, hôte, notation, description et équipements
 function Logement() {
     const { id } = useParams();
 
-    // Recherche du logement correspondant à l'id dans les données
     const logement = logements.find(
         (item) => item.id.toString() === id.toString()
     );
 
-    // Redirection si le logement n'existe pas
     if (!logement) {
         return <Navigate to="*" />;
     }
 
     return (
         <main className="logement">
-            {/* Galerie d'images du logement */}
             <Carousel pictures={logement.pictures} />
 
             <section className="logement__header">
@@ -32,7 +32,6 @@ function Logement() {
                     <h1 className="logement__title">{logement.title}</h1>
                     <p className="logement__loc">{logement.location}</p>
 
-                    {/* Liste des tags du logement */}
                     <div className="logement__tags">
                         {logement.tags.map((tag) => (
                             <Tag key={tag} label={tag} />
@@ -40,7 +39,6 @@ function Logement() {
                     </div>
                 </div>
 
-                {/* Informations sur l'hôte et notation */}
                 <div className="logement__host">
                     <Host
                         name={logement.host.name}
@@ -50,7 +48,6 @@ function Logement() {
                 </div>
             </section>
 
-            {/* Sections repliables */}
             <section className="logement__collapses">
                 <Collapse title="Description">
                     <p>{logement.description}</p>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// Composant Carousel
 // Carousel affiche une galerie d'images avec navigation
 // useState permet de stocker l'index de l'image actuellement affichée
 // Les boutons précédent / suivant modifient cet index

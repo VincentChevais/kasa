@@ -1,3 +1,6 @@
+// Composant Footer
+// Affiche le logo et le texte de copyright
+// Présent sur toutes les pages de l'application
 function Footer() {
   return (
     <footer className="footer">
