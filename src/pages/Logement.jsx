@@ -25,7 +25,7 @@ function Logement() {
 
     return (
         <main className="logement">
-            <Carousel pictures={logement.pictures} />
+            <Carousel pictures={logement.pictures} title={logement.title} />
 
             <section className="logement__header">
                 <div>

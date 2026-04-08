@@ -4,7 +4,7 @@ import { useState } from "react";
 // Carousel affiche une galerie d'images avec navigation
 // useState permet de stocker l'index de l'image actuellement affichée
 // Les boutons précédent / suivant modifient cet index
-function Carousel({ pictures }) {
+function Carousel({ pictures, title }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const total = pictures.length;
 
@@ -20,12 +20,26 @@ function Carousel({ pictures }) {
 
     return (
         <div className="carousel">
-            {/* Image actuellement affichée */}
-            <img
-                src={pictures[currentIndex]}
-                alt=""
-                className="carousel__image"
-            />
+            {/* Wrapper de toutes les images pour slide */}
+            {/* Gère l'animation :
+                - translateX pour déplacer horizontalement
+                - calcule la position en fonction de l'index actuel
+                - "-" pour slider vers la gauche
+                - transition en CSS pour l'effet de glissement */}
+            <div
+                className="carousel__track"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+                {pictures.map((picture, index) => (
+                    <div key={index} className="carousel__slide">
+                        <img
+                            src={picture}
+                            alt={`Photo du logement ${title}`}
+                            className="carousel__image"
+                        />
+                    </div>
+                ))}
+            </div>
 
             {/* Navigation affichée uniquement s'il y a plusieurs images */}
             {total > 1 && (

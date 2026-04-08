@@ -27,8 +27,16 @@
         font-weight: 500;
         text-align: center;
 
+        & span {
+            display: inline;
+        }
+
         @include mobile {
             font-size: $font-size-md;
+
+            & span {
+                display: block;
+            }
         }
     }
 

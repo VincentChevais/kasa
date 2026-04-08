@@ -10,7 +10,8 @@ function Error404() {
             <h1 className="error__title">404</h1>
 
             <p className="error__text">
-                Oups! La page que vous demandez n'existe pas.
+                <span>Oups! La page que </span>
+                <span>vous demandez n'existe pas.</span>
             </p>
 
             <Link to="/" className="error__link">
