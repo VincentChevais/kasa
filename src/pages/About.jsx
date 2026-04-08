@@ -1,6 +1,6 @@
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
-import BannerImage from "../assets/banner-about.jpg";
+import BannerImage from "../assets/banner-about.webp";
 import aboutData from "../data/about.json";
 
 // Page About

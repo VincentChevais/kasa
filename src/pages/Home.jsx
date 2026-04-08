@@ -1,7 +1,7 @@
 import Banner from "../components/Banner";
 import Card from "../components/Card";
 import logements from "../data/logements.json";
-import BannerImage from "../assets/banner-home.jpg";
+import BannerImage from "../assets/banner-home.webp";
 
 // Page Home
 // Affiche la bannière principale ainsi que la liste des logements.

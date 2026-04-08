@@ -8,7 +8,7 @@ function Banner({ image, title, className }) {
 
       <img
         src={image}
-        alt=""
+        alt="Bannière"
         className="banner__img"
         fetchPriority="high"
       />
