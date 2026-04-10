@@ -10,12 +10,12 @@ function Carousel({ pictures, title }) {
 
     // Passe à l'image suivante (boucle à la fin)
     const next = () => {
-        setCurrentIndex((prev) => (prev + 1) % total);
+        setCurrentIndex((index) => (index + 1) % total);
     };
 
     // Passe à l'image précédente (boucle au début)
     const prev = () => {
-        setCurrentIndex((prev) => (prev - 1 + total) % total);
+        setCurrentIndex((index) => (index - 1 + total) % total);
     };
 
     return (
